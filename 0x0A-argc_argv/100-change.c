@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	total = atoi(agrv[1]);/*Convert str to int*/
+	total = atoi(argv[1]);/*Convert str to int*/
 
 	if (total <= 0)
 	{
