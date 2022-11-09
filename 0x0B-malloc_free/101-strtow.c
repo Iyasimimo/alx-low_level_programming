@@ -83,26 +83,25 @@ char **strtow(char *str)
 		while (str[index] == ' ')
 			index++;
 
-	letters = word_len(str + index);
+		letters = word_len(str + index);
 
-	strings[w] = malloc(sizeof(char) * (letters + 1));
+		string[w] = malloc(sizeof(char) * (letters + 1));
 
-	if (strings[w] == NULL)
-	{
-		for (; w >= 0; w--)
-			free(strings[w]);
+		if (strings[w] == NULL)
+		{
+			for (; w >= 0; w--)
+				free(strings[w]);
 
-		free(strings);
-		return (NULL);
-	}
+			free(strings);
+			return (NULL);
+		}
 
-	for (l = 0; l < letters; l++)
-		string[w][l] = str[index++];
+		for (l = 0; l < letters; l++)
+			strings[w][l] = str[index++];
 
-	strings[w][l] = '\0';
+		strings[w][l] = '\0';
 	}
 	strings[w] = NULL;
 
 	return (strings);
 }
-
