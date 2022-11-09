@@ -1,3 +1,8 @@
+/*
+ * File: 101-strtow.c
+ * Auth: iyasimimo
+ */
+
 #include "main.h"
 #include <stdlib.h>
 
@@ -60,7 +65,7 @@ int count_words(char *str)
 char **strtow(char *str)
 {
 	char **string;
-	int index = 0, words, w, letters, l;
+	int index = 0, words, w, letters, i;
 
 	if (str == NULL || str[0] == '\0')
 		return (NULL);
@@ -92,9 +97,9 @@ char **strtow(char *str)
 	}
 
 	for (i = 0; i < letters; i++)
-		string[w][1] = str[index++];
+		string[w][i] = str[index++];
 
-	strings[w][1] = '\0';
+	strings[w][i] = '\0';
 	}
 	strings[w] = NULL;
 
